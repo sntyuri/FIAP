@@ -12,12 +12,12 @@ vies = vies / vies.sum()
 
 
 def sortear_nomes(qtd=1, reposicao=True):
-    # uso np.random.choice para sortear com base nas probabilidades
+    # np.random.choice para sortear com base nas probabilidades
     return np.random.choice(nomes, size=qtd, replace=reposicao, p=vies)
 
 
 def simular_sorteios(quantidade_simulacoes=10000):
-    # gero varios sorteios de uma vez para ver a frequencia real
+    # varios sorteios de uma vez para ver a frequencia real
     resultados = np.random.choice(nomes, size=quantidade_simulacoes, p=vies)
 
     # np.unique com return_counts conta quantas vezes cada nome apareceu
